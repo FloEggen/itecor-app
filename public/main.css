@@ -368,8 +368,16 @@ strong {
     color: black;
     border-radius: 5px;
     font-size: 1rem;
-    text-justify: newspaper;
     padding: 5px;
+}
+
+.hide-title {
+    font-weight: bold;
+}
+
+.hide-description {
+    margin-top: 5%;
+    text-align: left;
 }
 
 .office-hr > .hide {
@@ -382,14 +390,14 @@ strong {
 .office-director > .hide {
     top: 20%;
     left: 20%;
-    width: 60%;
+    width: 65%;
     height: 70%;
 }
 
 .row > .hide {
     top: 20%;
     left: 20%;
-    width: 55%;
+    width: 65%;
     height: 60%;
     padding: 10px;
 }
@@ -413,6 +421,10 @@ strong {
 
 .occupied {
     background-color:red;
+}
+
+.free-seats-summary {
+    color: var(--itecor-official-color);
 }
 
 /* css for ejs office-vevey */
