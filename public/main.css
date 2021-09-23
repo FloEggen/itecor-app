@@ -184,6 +184,11 @@ header {
     width: 80%;
     display: block;
     margin: auto;
+    border-radius: 5px;
+}
+
+.img-office:hover {
+    border: 2px solid var(--itecor-official-color);
 }
 
 small {
