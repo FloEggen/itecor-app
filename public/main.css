@@ -1,0 +1,434 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --itecor-official-color: #ec6707;
+    --office-wall-color: black;
+    --neutral-seat-color: lightblue;
+    --free-seat-color: green;
+    --office-wall-size: 2px;    
+    --containerWidth: 900px;
+    --containerHeight: 700px;
+    --wallWidth: 720px;
+    --wallHeight: 560px;
+    --seatWidth: 50px;
+    --seatHeight: 50px;
+}
+
+body {
+    background-color: black;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@media (max-width: 900px) and (max-height: 700px) {
+    body {
+        overflow: scroll;
+    }
+}
+
+.login-container {
+    width: var(--wallWidth);
+    height: var(--wallHeight);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+}
+
+.login-image-side {
+    flex: 1;
+}
+
+.login-image-side > img {
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+.login-form-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-side > h1 {
+    flex: 1;
+    text-align: center;
+    color: black;
+    font-size: 1.6rem;
+    padding-top: 10%;
+}
+
+.info {
+    flex: 1;
+    color: grey;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 90%;
+    margin: auto;
+}
+
+.formular {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.login-entity {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input {
+    font-size: 0.9rem;
+    color: rgb(58, 56, 56);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border: 1px solid lightgrey;
+}
+
+button {
+    background-color: var(--itecor-official-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.0rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    padding: 5px 10px;
+    width: 60%;
+}
+
+header {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    height: 50%;
+    margin-top: 2rem;
+    margin: auto;
+}
+
+.img-logo {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+/* css for ejs logged-user */
+.container {
+    margin-top: 3%;
+    color: #fff;
+    width: var(--containerWidth);
+    height: var(--containerHeight);
+}
+
+.container > p {
+    font-size: 1.2rem;
+}
+
+.office-section {
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    width: var(--containerWidth);
+    height: calc(var(--containerHeight) / 2);
+    margin: auto;
+    margin-top: 40px;
+}
+
+.office-info {
+    padding-top: 2%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.offices {
+    display: flex;
+}
+
+.vevey-office {
+    flex: 1;
+}
+
+.geneva-office {
+    flex: 1;
+}
+
+.img-office {
+    height: 80%;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+small {
+    margin-top: 2%;
+    display: block;
+    text-align: center;
+    color: rgb(83, 81, 81);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+strong {
+    color: var(--itecor-official-color);
+}
+
+/* css for ejs office-geneva */
+.office-container {
+    background-color: #444;
+    border-radius: 10px;
+    color: var(--itecor-official-color);
+    width: var(--containerWidth);
+    height: var(--containerHeight);
+    margin: auto;
+}
+
+.office-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.office-summary {
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.office-walls {
+    background-color: white;
+    width: var(--wallWidth);
+    height: var(--wallHeight);
+    margin: auto;
+    position: relative;
+}
+
+.legend {
+    font-weight: bold;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.office-director {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: 0px;
+    left: 0px;
+    width: calc(var(--wallWidth)*0.25 + 2px);
+    height: calc(var(--wallHeight)*0.3 + 2px); 
+}
+
+.office-hr {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: 0px;
+    left: calc(var(--wallWidth)*0.25);
+    width: calc(var(--wallWidth)*0.75 + 2px);
+    height: calc(var(--wallHeight)*0.3 + 2px); 
+    display: flex;
+}
+
+.hall {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: calc(var(--wallHeight)*0.3);
+    left: 0px;
+    width: calc(var(--wallWidth)*0.30 + 2px);
+    height: calc(var(--wallHeight)*0.35 + 2px); 
+    display: flex;
+}
+
+.img-porte-manteau {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+}
+
+.conference {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: calc(var(--wallHeight)*0.65);
+    left: 0px;
+    width: calc(var(--wallWidth)*0.35 + 2px);
+    height: calc(var(--wallHeight)*0.35 + 2px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.office-managers {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: calc(var(--wallHeight)*0.65);
+    left: calc(var(--wallWidth)*0.35);
+    width: calc(var(--wallWidth)*0.30 + 2px);
+    height: calc(var(--wallHeight)*0.35 + 2px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.office-consultants {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: calc(var(--wallHeight)*0.65);
+    left: calc(var(--wallWidth)*0.65);
+    width: calc(var(--wallWidth)*0.35 + 2px);
+    height: calc(var(--wallHeight)*0.35 + 2px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coffee {
+    position: absolute;
+    border: var(--office-wall-size) solid var(--office-wall-color);
+    top: calc(var(--wallHeight)*0.3);
+    left: calc(var(--wallWidth) - var(--wallWidth)*0.3);
+    width: calc(var(--wallWidth)*0.3 + 2px);
+    height: calc(var(--wallHeight)*0.35 + 2px); 
+    display: flex;
+}
+
+.img-coffee {
+    max-width: 60%;
+    max-height: 60%;
+    margin: auto;
+}
+
+.seat {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: var(--seatWidth);
+    height: var(--seatHeight);
+    margin: auto;
+}
+
+.consultant-seat:hover {
+    scale: 0.96;
+}
+
+.row {
+    width: calc(var(--seatWidth) * 2.1);
+    display: flex;
+    margin-left: calc(50% - var(--seatWidth));
+    margin-top: 2px;
+}
+
+.neutral-seat {
+    background-color: var(--neutral-seat-color);
+    margin: auto;
+}
+
+.office-director > .unbookable-seat {
+    background-color: var(--itecor-official-color);
+    position: absolute;
+    top: calc(50% - var(--seatWidth)/2);
+    left: calc(50% - var(--seatHeight)/2);
+}
+
+.office-hr > .unbookable-seat {
+    background-color: var(--itecor-official-color);
+    margin: auto;
+}
+
+.hide {
+    display: none;
+    position: absolute;
+    background-image: radial-gradient(circle farthest-side, white, lightgrey);
+    color: black;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-justify: newspaper;
+    padding: 5px;
+}
+
+.office-hr > .hide {
+    top: 20%;
+    left: 5%;
+    width: 18%;
+    height: 70%;
+}
+
+.office-director > .hide {
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 70%;
+}
+
+.row > .hide {
+    top: 20%;
+    left: 20%;
+    width: 55%;
+    height: 60%;
+    padding: 10px;
+}
+
+.office-hr > .consultant-seat {
+    margin-left: 1.5rem;
+    margin: auto;
+}
+
+.conference > .seat {
+    margin: auto;
+}
+
+.office-managers > .seat {
+    margin: auto;
+}
+
+.free {
+    background-color: var(--free-seat-color);
+}
+
+.occupied {
+    background-color:red;
+}
+
+/* css for ejs office-vevey */
+.office-walls-vevey {
+    background-color: white;
+    width: var(--wallWidth);
+    height: var(--wallHeight);
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+.img-wip {
+    margin: auto;
+}
+
+.links {
+    color: var(--itecor-official-color);
+}

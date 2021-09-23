@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itecor Test App</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="images/itecor_logo.png" alt="itecor logo" class="img-logo"></a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Welcome <strong><%= username %></strong> to the automated test evaluation website of Itecor </h2>
+        <p>Your task will be to implement test cases verifying some specifications defined for the application: book a
+            seat at Itecor. This is a platform used to manage the workspaces of Itecor Vevey and Geneva.</p>
+        <div class="office-section">
+            <p class="office-info">Please choose the office related to your task</p>
+            <div class="offices">
+                <div class="vevey-office">
+                    <a href="/office/vevey/"><img src="images/vevey.jpg" alt="Vevey" class="img-office"></a>
+                    <small>Vevey</small>
+                </div>
+                <div class="geneva-office">
+                    <a href="/office/geneva/"><img src="images/geneva.jpg" alt="Geneva" class="img-office"></a>
+                    <small>Geneva</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

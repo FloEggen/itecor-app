@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itecor Test App</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="images/itecor_logo.png" alt="itecor logo" class="img-logo"></a>
+        </div>
+    </header>
+    <div class="login-container">
+        <div class="login-image-side">
+            <img src="/images/itecor_vision_low.jpg" alt="itecor vision">
+        </div>
+        <div class="login-form-side">
+            <h1>Itecor test platform</h1>
+            <p class="info">Please login with the username and password that were given to you
+            <p>
+            <form action="/login" method="POST" class="formular">
+                <div class="login-entity">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter Username"><br>
+                </div>
+                <div class="login-entity">
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
+                </div>
+                <button class="submit-btn" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
