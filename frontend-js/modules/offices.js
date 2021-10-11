@@ -42,7 +42,6 @@ export default class Offices {
         this.elementsWithHide.forEach(element => {
             element.addEventListener("click", () => {
                 if (element.style.display == "block") {
-                    console.log("Hey there")
                     element.style.display = "none"
                 }
             })
@@ -57,6 +56,7 @@ export default class Offices {
     adaptFreeSeatsMessage() {
         let freeSeats = this.countNumberOfFreeSeats()
         this.freeSeatsSummary.innerHTML = `${freeSeats.length}`
+        //this.freeSeatsSummary.setAttribute("value", `${freeSeats.length}`)
     }
 
 }

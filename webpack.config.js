@@ -8,6 +8,11 @@ module.exports = {
       "path": false
     },
   },
+  entry: './frontend-js/main-users.js',
+  output: {
+    filename: 'users-bundled.js',
+    path: path.resolve(__dirname, 'public')
+  },
   entry: './frontend-js/main.js',
   output: {
     filename: 'main-bundled.js',

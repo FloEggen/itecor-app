@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <script src="index.js"></script>
     <header>
         <div class="logo">
             <a href="/"><img src="images/itecor_logo.png" alt="itecor logo" class="img-logo"></a>
@@ -32,13 +31,14 @@
                     <label for="password">Password:</label><br>
                     <input type="password" id="password" name="password" placeholder="Enter Password"><br><br>
                 </div>
-                <button class="submit-btn" type="submit">
+                <button class="submit-btn" id="connexion_btn" type="submit">
                     Submit
                 </button>
             </form>
         </div>
     </div>
 
+    <%- include('includes/footer') %>
 </body>
 
 </html>

@@ -14,84 +14,87 @@
             <a href="/"><img src="/images/itecor_logo.png" alt="itecor logo" class="img-logo"></a>
         </div>
     </header>
-    <div class="office-container">
-        <p class="office-title">Geneva Office</p>
-        <div class="office-walls">
-            <div class="office-director">
-                <div class="legend">Director Office</div>
-                <div class="seat unbookable-seat"></div>
-                <div class="hide">
-                    <div class="hide-title">Director chair</div>
-                    <div class="hide-description">This seat cannot be booked</div>
-                </div>
-            </div>
-            <div class="office-hr">
-                <div class="legend">HR Office</div>
-                <div class="seat unbookable-seat"></div>
-                <div class="hide">
-                    <div class="hide-title">HR chair</div>
-                    <div class="hide-description">This seat cannot be booked</div>
-                </div>
-                <div class="seat consultant-seat free"></div>
-                <div class="seat consultant-seat free"></div>
-                <div class="seat consultant-seat free"></div>
-                <div class="seat consultant-seat free"></div>
-            </div>
-            <div class="hall">
-                <div class="legend">Hall</div>
-                <img src="/images/porte_manteau.png" alt="porte-manteau" class="img-porte-manteau">
-            </div>
-            <div class="coffee">
-                <div class="legend">Coffee</div>
-                <img src="/images/coffee_cup.png" alt="coffee cup" class="img-coffee">
-            </div>
-            <div class="conference">
-                <div class="legend">Conference Room</div>
-                <div class="row">
-                    <div class="seat neutral-seat unbookable-seat"></div>
-                    <div class="hide">
-                        <div class="hide-title">Conference chair 1</div>
-                        <div class="hide-description">This seat cannot be booked</div>
-                    </div>
-                    <div class="seat neutral-seat unbookable-seat"></div>
-                    <div class="hide">
-                        <div class="hide-title">Conference chair 2</div>
+    <div class="office-global">
+        <div class="office-container">
+            <p class="office-title">Geneva Office</p>
+            <div class="office-walls">
+                <div class="office-director">
+                    <div class="legend">Director Office</div>
+                    <div class="seat unbookable-seat"></div>
+                    <div class="hide" id="popup_director">
+                        <div class="hide-title">Director chair</div>
                         <div class="hide-description">This seat cannot be booked</div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="seat neutral-seat unbookable-seat"></div>
-                    <div class="hide">
-                        <div class="hide-title">Conference chair 3</div>
+                <div class="office-hr">
+                    <div class="legend">HR Office</div>
+                    <div class="seat unbookable-seat"></div>
+                    <div class="hide" id="popup_hr">
+                        <div class="hide-title">HR chair</div>
                         <div class="hide-description">This seat cannot be booked</div>
                     </div>
-                    <div class="seat neutral-seat unbookable-seat"></div>
-                    <div class="hide">
-                        <div class="hide-title">Conference chair 4</div>
-                        <div class="hide-description">This seat cannot be booked</div>
+                    <div class="seat consultant-seat free"></div>
+                    <div class="seat consultant-seat free"></div>
+                    <div class="seat consultant-seat free"></div>
+                    <div class="seat consultant-seat free"></div>
+                </div>
+                <div class="hall">
+                    <div class="legend">Hall</div>
+                    <img src="/images/porte_manteau.png" alt="porte-manteau" class="img-porte-manteau">
+                </div>
+                <div class="coffee">
+                    <div class="legend">Coffee</div>
+                    <img src="/images/coffee_cup.png" alt="coffee cup" class="img-coffee">
+                </div>
+                <div class="conference">
+                    <div class="legend">Conference Room</div>
+                    <div class="row">
+                        <div class="seat neutral-seat unbookable-seat"></div>
+                        <div class="hide" id="popup_conf1">
+                            <div class="hide-title">Conference chair 1</div>
+                            <div class="hide-description">This seat cannot be booked</div>
+                        </div>
+                        <div class="seat neutral-seat unbookable-seat"></div>
+                        <div class="hide" id="popup_conf2">
+                            <div class="hide-title">Conference chair 2</div>
+                            <div class="hide-description">This seat cannot be booked</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="seat neutral-seat unbookable-seat"></div>
+                        <div class="hide" id="popup_conf3">
+                            <div class="hide-title">Conference chair 3</div>
+                            <div class="hide-description">This seat cannot be booked</div>
+                        </div>
+                        <div class="seat neutral-seat unbookable-seat"></div>
+                        <div class="hide" id="popup_conf4">
+                            <div class="hide-title">Conference chair 4</div>
+                            <div class="hide-description">This seat cannot be booked</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="office-managers">
+                    <div class="legend">Managers Office</div>
+                    <div class="row">
+                        <div class="seat consultant-seat free"></div>
+                        <div class="seat consultant-seat free"></div>
+                    </div>
+                </div>
+                <div class="office-consultants">
+                    <div class="legend">Consultants Office</div>
+                    <div class="row">
+                        <div class="seat consultant-seat free"></div>
+                        <div class="seat consultant-seat free"></div>
+                    </div>
+                    <div class="row">
+                        <div class="seat consultant-seat free"></div>
+                        <div class="seat consultant-seat free"></div>
                     </div>
                 </div>
             </div>
-            <div class="office-managers">
-                <div class="legend">Managers Office</div>
-                <div class="row">
-                    <div class="seat consultant-seat free"></div>
-                    <div class="seat consultant-seat free"></div>
-                </div>
-            </div>
-            <div class="office-consultants">
-                <div class="legend">Consultants Office</div>
-                <div class="row">
-                    <div class="seat consultant-seat free"></div>
-                    <div class="seat consultant-seat free"></div>
-                </div>
-                <div class="row">
-                    <div class="seat consultant-seat free"></div>
-                    <div class="seat consultant-seat free"></div>
-                </div>
-            </div>
+            <p class="office-summary">The office has still <span class="free-seats-summary"></span> free seats.</p>
         </div>
-        <p class="office-summary">The office has still <span class="free-seats-summary"></span> free seats.</p>
+        <%- include('includes/footer') %>
     </div>
     <script src="/main-bundled.js"></script>
 </body>
