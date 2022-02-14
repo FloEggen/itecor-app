@@ -1,7 +1,19 @@
 const express = require('express')
+const session = require('express-session')
 const app = express()
 const dotenv = require('dotenv')
 dotenv.config()
+
+// Make our app support sessions
+let sessionOptions = session({
+    secret: "Javascript is soooo cool",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24, httpOnly: true }
+})
+
+app.use(sessionOptions)
+// End of session config
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())

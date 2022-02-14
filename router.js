@@ -4,6 +4,7 @@ const userController = require('./controllers/userController')
 const officeController = require('./controllers/officeController')
 router.get('/', userController.home)
 router.post('/login', userController.login)
+router.get('/logout', userController.logout)
 router.get('/office/geneva/', officeController.accessGeneva)
 router.get('/office/vevey/', officeController.accessVevey)
 module.exports = router

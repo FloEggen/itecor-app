@@ -2,20 +2,31 @@ const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 
 exports.home = function (req, res) {
-    res.render('home-guest')
+    if (req.session.user) {
+        // console.log(req.session.user.username)
+        res.render('logged-user', { username: req.session.user.username })
+    } else {
+        res.render('home-guest')
+    }
 }
 
 exports.login = function (req, res) {
     let user = new User(req.body)
     if (user.login()) {
-        res.render('logged-user', { username: user.data.username })
+        // The session object is unique per user visitor. The attribute user is declared here.
+        req.session.user = { username: user.data.username }
+        req.session.save(function () {
+            res.redirect('/')
+        })
     } else {
         res.render('home-guest')
     }
+}
 
-
-
-    //res.send("Hello " + user.data.username + " this is your pwd: " + user.data.password)
+exports.logout = function (req, res) {
+    req.session.destroy(function () {
+        res.redirect('/')
+    })
 }
 
 exports.apiLogin = function (req, res) {
