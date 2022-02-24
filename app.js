@@ -29,6 +29,6 @@ app.use(express.static('public'))
 const router = require('./router.js')
 app.use('/', router)
 
-let port = 4001
+let port = process.env.PORT
 if (port == null || port == "") { port = 4001 }
 app.listen(port)
