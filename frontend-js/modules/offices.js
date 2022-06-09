@@ -6,7 +6,7 @@ export default class Offices {
         this.consultantSeats = document.querySelectorAll(".consultant-seat")
         this.freeSeatsSummary = document.querySelector(".free-seats-summary")
         this.unbookableSeats = document.querySelectorAll(".unbookable-seat")
-        this.elementsWithHide = document.querySelectorAll(".hide")
+        this.elementsWithBubble = document.querySelectorAll(".bubble")
 
         this.watchConsultantSeatBooking()
     }
@@ -35,11 +35,11 @@ export default class Offices {
             })
         })
 
-        this.controlHiddenElements()
+        this.controlBubbleElements()
     }
 
-    controlHiddenElements() {
-        this.elementsWithHide.forEach(element => {
+    controlBubbleElements() {
+        this.elementsWithBubble.forEach(element => {
             element.addEventListener("click", () => {
                 if (element.style.display == "block") {
                     element.style.display = "none"

@@ -25,7 +25,6 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 
-
 const router = require('./router.js')
 app.use('/', router)
 
